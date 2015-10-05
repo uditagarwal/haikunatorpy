@@ -4,7 +4,7 @@
 [![Latest Version](https://img.shields.io/pypi/v/haikunator.svg?style=flat-square)](https://pypi.python.org/pypi/haikunator)
 
 
-Generate Heroku-like random names to use in your applications.
+Generate Heroku-like random names to use in your applications. Needed the names to represent more human objects and thus the changes
 
 ## Installation
 ```
