@@ -12,34 +12,44 @@ def haikunate(delimiter='-', tokenLength=4, tokenHex=False, tokenChars='01234567
     """
 
     adjs = [
-      'autumn', 'hidden', 'bitter', 'misty', 'silent', 'empty', 'dry', 'dark',
-      'summer', 'icy', 'delicate', 'quiet', 'white', 'cool', 'spring', 'winter',
-      'patient', 'twilight', 'dawn', 'crimson', 'wispy', 'weathered', 'blue',
-      'billowing', 'broken', 'cold', 'damp', 'falling', 'frosty', 'green',
-      'long', 'late', 'lingering', 'bold', 'little', 'morning', 'muddy', 'old',
-      'red', 'rough', 'still', 'small', 'sparkling', 'throbbing', 'shy',
-      'wandering', 'withered', 'wild', 'black', 'young', 'holy', 'solitary',
-      'fragrant', 'aged', 'snowy', 'proud', 'floral', 'restless', 'divine',
-      'polished', 'ancient', 'purple', 'lively', 'nameless', 'lucky', 'odd', 'tiny',
-      'free', 'dry', 'yellow', 'orange', 'gentle', 'tight', 'super', 'royal', 'broad',
-      'steep', 'flat', 'square', 'round', 'mute', 'noisy', 'hushy', 'raspy', 'soft',
-      'shrill', 'rapid', 'sweet', 'curly', 'calm', 'jolly', 'fancy', 'plain', 'shinny'
+        "Naughty", "Adorable", "Cute", "Clever", "Mischevious", "Happy", "Loved",
+        "Playful", "Energetic", "Wild", "Joyful", "Priceless", "Awesome", "Curious",
+        "Protective", "Dominant", "Domestic", "Loyal", "Funny", "Hilarious", "Lucky",
+        "Zippy", "Fast", "Wonderful", "Great", "Soft", "Precious", "Quick", "Unique",
+        "Brave", "Courageous", "Cuddly", "Snuggly", "Fabulous", "Fantastic", "Goofy",
+        "Friendly", "Affectionate", "Giddy", "Jolly", "Jumpy", "Kindhearted",
+        "Overjoyed", "Tricky", "Wacky", "Warm", "Youthful", "Young", "Upbeat",
+        "Attractive", "Supreme", "Distinct", "Huggable", "Super", "Wide-Eyed",
+        "Pleasent", "Strong"
     ]
 
     nouns = [
-      'waterfall', 'river', 'breeze', 'moon', 'rain', 'wind', 'sea', 'morning',
-      'snow', 'lake', 'sunset', 'pine', 'shadow', 'leaf', 'dawn', 'glitter',
-      'forest', 'hill', 'cloud', 'meadow', 'sun', 'glade', 'bird', 'brook',
-      'butterfly', 'bush', 'dew', 'dust', 'field', 'fire', 'flower', 'firefly',
-      'feather', 'grass', 'haze', 'mountain', 'night', 'pond', 'darkness',
-      'snowflake', 'silence', 'sound', 'sky', 'shape', 'surf', 'thunder',
-      'violet', 'water', 'wildflower', 'wave', 'water', 'resonance', 'sun',
-      'wood', 'dream', 'cherry', 'tree', 'fog', 'frost', 'voice', 'paper',
-      'frog', 'smoke', 'star', 'atom', 'band', 'bar', 'base', 'block', 'boat',
-      'term', 'credit', 'art', 'fashion', 'truth', 'disk', 'math', 'unit', 'cell',
-      'scene', 'heart', 'recipe', 'union', 'limit', 'bread', 'toast', 'bonus',
-      'lab', 'mud', 'mode', 'poetry', 'tooth', 'hall', 'king', 'queen', 'lion', 'tiger',
-      'penguin', 'kiwi', 'cake', 'mouse', 'rice', 'coke', 'hola', 'salad', 'hat'
+        "Lucy", "Daisy", "Molly", "Lola", "Sophie", "Sadie", "Maggie", "Chloe",
+        "Bailey", "Roxy", "Zoey", "Lily", "Luna", "Coco", "Stella", "Gracie",
+        "Abby", "Penny", "Zoe", "Ginger", "Ruby", "Rosie", "Lilly", "Ellie",
+        "Mia", "Sasha", "Lulu", "Pepper", "Nala", "Lexi", "Lady", "Emma",
+        "Riley", "Dixie", "Annie", "Maddie", "Piper", "Princess", "Izzy",
+        "Maya", "Olive", "Cookie", "Roxie", "Angel", "Belle", "Layla", "Missy",
+        "Cali", "Honey", "Millie", "Harley", "Marley", "Holly", "Kona",
+        "Shelby", "Jasmine", "Ella", "Charlie", "Minnie", "Willow", "Phoebe",
+        "Callie", "Scout", "Katie", "Dakota", "Sugar", "Sandy", "Josie", "Macy",
+        "Trixie", "Winnie", "Peanut", "Mimi", "Hazel", "Mocha", "Cleo", "Hannah",
+        "Athena", "Lacey", "Sassy", "Lucky", "Bonnie", "Allie", "Brandy",
+        "Sydney", "Casey", "Gigi", "Baby", "Madison", "Heidi", "Sally",
+        "Shadow", "Cocoa", "Pebbles", "Misty", "Nikki", "Lexie", "Grace",
+        "Sierra", "Max", "Buddy", "Charlie", "Jack", "Cooper", "Rocky", "Toby",
+        "Tucker", "Jake", "Bear", "Duke", "Teddy", "Oliver", "Riley", "Bailey",
+        "Bentley", "Milo", "Buster", "Cody", "Dexter", "Winston", "Murphy",
+        "Leo", "Lucky", "Oscar", "Louie", "Zeus", "Henry", "Sam", "Harley",
+        "Baxter", "Gus", "Sammy", "Jackson", "Bruno", "Diesel", "Jax", "Gizmo",
+        "Bandit", "Rusty", "Marley", "Jasper", "Brody", "Roscoe", "Hank", "Otis",
+        "Bo", "Joey", "Beau", "Ollie", "Tank", "Shadow", "Peanut", "Hunter",
+        "Scout", "Blue", "Rocco", "Simba", "Tyson", "Ziggy", "Boomer",
+        "Romeo", "Apollo", "Ace", "Luke", "Rex", "Finn", "Chance", "Rudy",
+        "Loki", "Moose", "George", "Samson", "Coco", "Benny", "Thor", "Rufus",
+        "Prince", "Chester", "Brutus", "Scooter", "Chico", "Spike", "Gunner",
+        "Sparky", "Mickey", "Kobe", "Chase", "Oreo", "Frankie", "Mac", "Benji",
+        "Bubba", "Champ", "Brady", "Elvis", "Copper", "Cash", "Archie", "Walter"
     ]
 
     if tokenHex:
